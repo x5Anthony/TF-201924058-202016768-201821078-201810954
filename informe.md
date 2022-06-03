@@ -1,3 +1,5 @@
+![UPC](/assets/upc-logo.png)
+
 ## Complejidad Algorítmica -Trabajo Final
 #### “Informe del Trabajo Final”
 
