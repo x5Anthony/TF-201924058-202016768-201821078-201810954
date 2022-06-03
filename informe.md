@@ -1,7 +1,7 @@
 ## Complejidad Algorítmica -Trabajo Final
 #### “Informe del Trabajo Final”
 
-#### Docente: Patricia Daniela Reyes Silva
+### Docente: Patricia Daniela Reyes Silva
 
 ### Seccion: WS6B
 
@@ -10,7 +10,6 @@
 ##### - nombre2
 ##### - nombre3
 ##### - nombre4
-
 
 ## Contenido
 1. Introducción
