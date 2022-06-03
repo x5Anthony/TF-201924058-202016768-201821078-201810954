@@ -1,9 +1,14 @@
-<h2>Complejidad Algorítmica</h2>
-<br><br>
-<h2>Trabajo Final</h2>
-<h4>“Informe del Trabajo Final”</h4>
+## Complejidad Algorítmica -Trabajo Final
+#### “Informe del Trabajo Final”
 
-<h2> Contenido</h2>
+## Integrantes
+##### <nombre1>
+##### <nombre2>
+##### <nombre3>
+##### <nombre4>
+
+
+## Contenido
 <ol>
 <li>Introducción
 <li>Objetivos
