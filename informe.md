@@ -8,6 +8,7 @@
 ### Seccion: WS6B
 
 ### Integrantes:
+
 ##### - nombre1
 ##### - nombre2
 ##### - nombre3
