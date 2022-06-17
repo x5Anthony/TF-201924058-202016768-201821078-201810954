@@ -4,6 +4,10 @@ class nodo:
         self.listaady=[]
     def añadir_ady(self,nodo):
         self.listaady.append(nodo)
+    def mostrar(self):
+        print("La calle:", self.item.get_name())
+        for v in self.listaady:
+            print("Cruza con:", v.item.get_name())
 class arista:
     def __init__(self,id,id_calle,nombre_calle,id_calleorigen,id_callefinal,id_aristaorigen,id_aristafinal,distancia,velocidadd,lat,longi):
         self.item=int(id)
@@ -35,11 +39,11 @@ class grafo:
         self.cantidad+=1
     def añadir_arista(self,arista):
         self.arista.append(arista)
-        self.nodos[arista.get_idcalle()].añadir_ady(self.nodos[arista.get_idcalleorigen()])
-        self.nodos[arista.get_idcalleorigen()].añadir_ady(self.nodos[arista.get_idcalle()])
+        self.nodos[arista.get_idcalle()-1].añadir_ady(self.nodos[arista.get_idcalleorigen()-1])
+        self.nodos[arista.get_idcalleorigen()-1].añadir_ady(self.nodos[arista.get_idcalle()-1])
     def mostrar(self):
         for n in self.nodos:
-            print(n.item.mostrar())
+            print(n.mostrar())
 
 
 

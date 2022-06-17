@@ -17,7 +17,7 @@ if __name__=="__main__":
         reader=csv.reader(f,delimiter=";")
         for row in reader:
             grafito.añadir_arista(arista(row[0],row[1],row[2],row[3],row[4],row[5],row[6],row[7],row[8],row[11],row[12]))
-    
+    grafito.mostrar()
     
 
 
