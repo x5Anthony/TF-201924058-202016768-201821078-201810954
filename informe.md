@@ -35,7 +35,7 @@
 
 3. Área de la ciudad
     - Descripción de la ciudad elegida
-    -- El área se encuentra en el Cono Norte de Lima en el distrito de Comas, pertenece a la urbanización El Retablo. Debido a la cercanía de uno de los integrantes        del grupo a la zona y a su familiaridad con ella, nos resultó factible su elección. Adicionalmente tenemos información de primera mano acerca a los tiempos de          congestión vehicular de tal modo que nos permitirá realizar pruebas más realistas.
+    ..* El área se encuentra en el Cono Norte de Lima en el distrito de Comas, pertenece a la urbanización El Retablo. Debido a la          cercanía de uno de los integrantes del grupo a la zona y a su familiaridad con ella, nos resultó factible su elección. Adicionalmente tenemos información de            primera mano acerca a los tiempos de congestión vehicular de tal modo que nos permitirá realizar pruebas más realistas.
     - Imagen estática de la ciudad o porción de ciudad elegida</ul>
     -- ![image](https://user-images.githubusercontent.com/66744988/174499196-ef1bb069-790d-4edb-bd40-248b3456f046.png)
 4. Descripción del conjunto de datos
@@ -53,6 +53,8 @@
 
 5. Grafo de la Ciudad
    - Un nodo representa una calle y una arista representa una intersección. Los vértices representan las calles de la ciudad .El costo de las aristas es el tiempo que      le toma al usuario recorrerla.
+   - ![image](https://user-images.githubusercontent.com/66744988/174499534-c4e1156c-b1c2-454c-8b13-1236b7eee27d.png)
+
 6. Diseño del Sistema de Trafico
     - Cómo se incorpora tráfico por horas en calles o segmentos de calles
     - Cómo se calcula el peso de arista en base a su longitud y factor de trafico
@@ -61,6 +63,6 @@
     - Implementación de visual del mapa y las rutas a partir del grafo y algoritmo seleccionado
     - Interfaz grafica
     - Enlaces: a repositorio de GitHub / a video de presentación.</ul>
-      -- https://github.com/x5Anthony/TF-201924058-202016768-201821078-201810954
+    ..* https://github.com/x5Anthony/TF-201924058-202016768-201821078-201810954
 7. Conclusiones 
 
