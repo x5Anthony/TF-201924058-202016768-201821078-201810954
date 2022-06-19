@@ -34,22 +34,21 @@
     - Aprender a usar herramientas que nos brinden una interfaz gráfica para poder representar el grafo y los algoritmos implementados por el grupo.
 
 3. Área de la ciudad
-    - Descripción de la ciudad elegida
-...El área se encuentra en el Cono Norte de Lima en el distrito de Comas, pertenece a la urbanización El Retablo. Debido a la cercanía de uno de los integrantes del grupo a la zona y a su familiaridad con ella, nos resultó factible su elección. Adicionalmente tenemos información de primera mano acerca a los tiempos de congestión vehicular de tal modo que nos permitirá realizar pruebas más realistas.
+    - Descripción de la ciudad elegida: El área se encuentra en el Cono Norte de Lima en el distrito de Comas, pertenece a la urbanización El Retablo. Debido a la cercanía de uno de los integrantes del grupo a la zona y a su familiaridad con ella, nos resultó factible su elección. Adicionalmente tenemos información de primera mano acerca a los tiempos de congestión vehicular de tal modo que nos permitirá realizar pruebas más realistas.
     - Imagen estática de la ciudad o porción de ciudad elegida</ul>
     -- ![image](https://user-images.githubusercontent.com/66744988/174499196-ef1bb069-790d-4edb-bd40-248b3456f046.png)
 4. Descripción del conjunto de datos
     - Datos consignados por calle
-    .1. ID de la calle.
-    .2. Nombre de la calle.
-    .3. Cantidad de intersecciones.
+    1. ID de la calle.
+    2. Nombre de la calle.
+    3. Cantidad de intersecciones.
   
     - Datos consignados por intersección</ul>
-    .1. ID de la intercesión 
-    .2. ID donde se encuentra la intersección 
-    .3. Nombre de la calle
-    .4. Nombre de la calle con la que se cruza
-    .5. Peso de la arista (tiempo para recorrer la arista)
+    1. ID de la intercesión 
+    2. ID donde se encuentra la intersección 
+    3. Nombre de la calle
+    4. Nombre de la calle con la que se cruza
+    5. Peso de la arista (tiempo para recorrer la arista)
 
 5. Grafo de la Ciudad
    - Un nodo representa una calle y una arista representa una intersección. Los vértices representan las calles de la ciudad .El costo de las aristas es el tiempo que      le toma al usuario recorrerla.
