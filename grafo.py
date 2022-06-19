@@ -9,41 +9,32 @@ class nodo:
         for v in self.listaady:
             print("Cruza con:", v.item.get_name())
 class arista:
-    def __init__(self,id,id_calle,nombre_calle,id_calleorigen,id_callefinal,id_aristaorigen,id_aristafinal,distancia,velocidadd,lat,longi):
-        self.item=int(id)
-        self.id_calle=int(id_calle)
-        self.nombre_calle=nombre_calle
-        self.id_calleorigen=int(id_calleorigen)
-        self.id_callefinal=int(id_callefinal)
-        self.id_aristaorigen=int(id_aristaorigen)
-        self.id_aristafinal=int(id_aristafinal)
-        self.distancia=distancia
-        self.velocidad=int(velocidadd)
-        self.costo1=70
-        self.costo2=10000
-        self.latitud=lat
-        self.longitud=longi
-    def get_idcalle(self):
-        temp=self.id_calle
+    def __init__(self,nodo_origen,nodo_destino,peso) -> None:
+        self.nodo_origen=nodo_origen
+        self.nodo_destino=nodo_destino
+        self.nodo_origen.añadir_ady(self.nodo_destino)
+        self.nodo_destino.añadir_ady(self.nodo_origen)
+        self.peso=peso
+    def get_nodo_origen(self):
+        temp=self.nodo_origen
         return temp
-    def get_idcalleorigen(self):
-        temp=self.id_calleorigen
+    def get_nodo_final(self):
+        temp=self.nodo_destino
         return temp
 class grafo:
     def __init__(self):
-        self.nodos=[]
-        self.arista=[]
-        self.cantidad=0
-    def añadir_nodo(self,n):
+        self.nodos = []
+        self.aristas = []
+        self.cantidad_nodos = 0
+        self.cantidad_aristas=0
+
+    def añadir_nodo(self, n):
         self.nodos.append(n)
-        self.cantidad+=1
-    def añadir_arista(self,arista):
-        self.arista.append(arista)
-        self.nodos[arista.get_idcalle()-1].añadir_ady(self.nodos[arista.get_idcalleorigen()-1])
-        self.nodos[arista.get_idcalleorigen()-1].añadir_ady(self.nodos[arista.get_idcalle()-1])
-    def mostrar(self):
-        for n in self.nodos:
-            print(n.mostrar())
+        self.cantidad_nodos += 1
+
+    def añadir_arista(self, arista):
+        self.aristas.append(arista)
+        self.cantidad_aristas+=1
 
 
 
