@@ -1,6 +1,18 @@
-1;1;Av. Victor Andres Belaunde;2;3;1;2;0.14212;40;70;10000;-11.93504996342211;-77.05584786758754
-2;1;Av. Victor Andres Belaunde;3;4;2;3;0.05840;40;70;10000;-11.93571651621077;-77.05481521711893
-3;1;Av. Victor Andres Belaunde;4;5;3;4;0,25909;40;70;10000;-11.936072573889042;-77.05451582135517
-4;1;Av. Victor Andres Belaunde;5;6;4;5;0,53800;40;70;10000;-11.937816411674165;-77.05295448042156
-5;1;Av. Victor Andres Belaunde;6;7;5;6;0,24579;40;70;10000;-11.938171659396225;-77.05261144754736
-6;1;Av. Victor Andres Belaunde;7;6;6;5;0,24579;40;70;10000;-11.939827522360954;-77.05111745712993
+1;1;Av. Victor Andres Belaunde;2;50;0.4
+2;1;Av. Victor Andres Belaunde;3;25;0.1
+3;1;Av. Victor Andres Belaunde;4;25;0.1
+4;1;Av. Victor Andres Belaunde;5;30;0.1
+5;1;Av. Victor Andres Belaunde;6;25;0.1
+6;1;Av. Victor Andres Belaunde;7;30;0.1
+7;1;Av. Victor Andres Belaunde;8;60;0.6
+8;9;Jr. Jose de Sucre;2;40;0.25
+9;9;Jr. Jose de Sucre;3;30;0.2
+10;9;Jr. Jose de Sucre;4;30;0.2
+11;9;Jr. Jose de Sucre;10;30;0.1
+12;9;Jr. Jose de Sucre;5;40;0.2
+13;5;Jr. Enrique Pallardelli;11;30;0.6
+14;4;Jr. Jose Pezet;12;30;0.2
+15;10;Jr. Husares de Junín;12;30;0.2
+16;10;Jr. Husares de Junín;13;30;0.2
+17;4;Jr. Jose Pezet;13;20;0.1
+18;6;Jr. Leon Pinelo;14;20;0.3
