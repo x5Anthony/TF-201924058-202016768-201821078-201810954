@@ -1,11 +1,9 @@
-from base64 import decode, encode
-from grafo import nodo
-from grafo import grafo
 from Calle import CCalle
 from Calle import CInterseccion
-from grafo import arista
 import csv
 from datetime import datetime
+from grafo import grafo
+import math
 def es_horapunta(hora_actual)->bool:
     #horas punta para calcular el tráfico
     #hora punta en la mañana
@@ -32,22 +30,36 @@ if __name__=="__main__":
     grafito=grafo()
     #obteniendo hora actual
     hora_actual=datetime.now()
-    hora_actual.time()
+    horapunta=es_horapunta(hora_actual)
     with open("calles.csv",encoding="utf-8") as f:
         reader=csv.reader(f,delimiter=";")
         for row in reader:
             listacalles.append(CCalle(row[0],row[1],row[2]))
     for callesita in listacalles:
-        grafito.añadir_nodo(nodo(callesita))
+        grafito.agregarVertice(callesita)
     with open("intersecciones.csv",encoding="utf-8") as f:
         reader=csv.reader(f,delimiter=";")
         for row in reader:
-            listaintersecciones.append(CInterseccion(row[0],row[1],row[2],row[3],row[4],row[5],row[6],row[7],row[8],row[11],row[12],row[9],row[10]))
+            listaintersecciones.append(CInterseccion(row[0],row[1],row[2],row[3],row[4],row[5]))
     for interseccion in listaintersecciones:
-        if es_horapunta(hora_actual):
-            grafito.añadir_arista(arista(grafito.nodos[interseccion.get_idcalle()-1],grafito.nodos[interseccion.get_idcalleorigen()-1],interseccion.costo2))
+        if(horapunta):
+            ##esto es para calcular el peso
+            peso=(math.dist(listacalles[interseccion.id_calle-1].coordenadas,listacalles[interseccion.calle_cruza-1].coordenadas)/(interseccion.velocidad*interseccion.reduc_trafico))
+            grafito.agregarArista(interseccion.id_calle,interseccion.calle_cruza,peso)
         else:
-            grafito.añadir_arista(arista(grafito.nodos[interseccion.get_idcalle()-1],grafito.nodos[interseccion.get_idcalleorigen()-1],interseccion.costo1))
+            peso=(math.dist(listacalles[interseccion.id_calle-1].coordenadas,listacalles[interseccion.calle_cruza-1].coordenadas)/(interseccion.velocidad))
+            grafito.agregarArista(interseccion.id_calle,interseccion.calle_cruza,peso)
+    grafito.dibujar_grafica()
+    validador=True
+    for v in grafito.vertices:
+        print(v,grafito.vertices[v].item.nombre)
+    
+    origen=input("Introduzca el Id de la calle donde se encuentra: ")
+    origen=int(origen)
+    destino=input("Introduzca el Id de la calle a donde quiere dirigirse: ")
+    destino=int(destino)
+    grafito.dijkstra(origen)
+    print(grafito.camino(destino))
     
 
 
