@@ -3,44 +3,42 @@ import matplotlib.pyplot as plt
 class nodo:
     def __init__(self,item):
         self.item=i#item, en este caso será la clase calle
-		self.id = i.id#id de la calle
-		self.vecinos = []
-		self.visitado = False
-		self.padre = None
-		self.costo = float('inf')
+	self.id = i.id#id de la calle
+	self.vecinos = []
+	self.visitado = False
+	self.padre = None
+	self.costo = float('inf')
     def agregarVecino(self, vecino, peso):
-		if vecino not in self.vecinos:#agrega solo el id del vecino y su peso
-			self.vecinos.append([vecino, peso])
+	if vecino not in self.vecinos:#agrega solo el id del vecino y su peso
+		self.vecinos.append([vecino, peso])
 class grafo:
     def __init__(self):
-		self.vertices = {}#diccionario de vertices
-    def agregarVertice(self, i):
+	self.vertices = {}#diccionario de vertices
+    def agregarVertice(self, i):		
+	if i.id not in self.vertices:
+		self.vertices[i.id] = nodo(i)#solo agrega las id de los vecinos
+    def agregarArista(self, a, b, p):
 		
-		if i.id not in self.vertices:
-			self.vertices[i.id] = nodo(i)#solo agrega las id de los vecinos
+	if a in self.vertices and b in self.vertices: #solo agregas las id de los vecinos
+		self.vertices[a].agregarVecino(b, p)
+		self.vertices[b].agregarVecino(a, p)
 
-	def agregarArista(self, a, b, p):
-		
-		if a in self.vertices and b in self.vertices: #solo agregas las id de los vecinos
-			self.vertices[a].agregarVecino(b, p)
-			self.vertices[b].agregarVecino(a, p)
-
-	def camino(self, b):
-		camino = []
-		actual = b
-		while actual != None:
-			camino.insert(0, actual)
-			actual = self.vertices[actual].padre
-		G=nx.Graph()
-		for i in range(len(camino)-1):
-			G.add_edge(self.vertices[camino[i]].item.nombre,self.vertices[camino[i+1]].item.nombre)
-		pos = nx.layout.planar_layout(G)
-		nx.draw_networkx(G, pos)
-		labels = nx.get_edge_attributes(G, 'weight')
-		nx.draw_networkx_edge_labels(G, pos, edge_labels=labels)
-		plt.title("Deberia seguir esta ruta con un peso de "+ str(self.vertices[b].costo))
-		plt.show()
-		return [camino, self.vertices[b].costo]
+    def camino(self, b):
+	camino = []
+	actual = b
+	while actual != None:
+		camino.insert(0, actual)
+		actual = self.vertices[actual].padre
+	G=nx.Graph()
+	for i in range(len(camino)-1):
+		G.add_edge(self.vertices[camino[i]].item.nombre,self.vertices[camino[i+1]].item.nombre)
+	pos = nx.layout.planar_layout(G)
+	nx.draw_networkx(G, pos)
+	labels = nx.get_edge_attributes(G, 'weight')
+	nx.draw_networkx_edge_labels(G, pos, edge_labels=labels)
+	plt.title("Deberia seguir esta ruta con un peso de "+ str(self.vertices[b].costo))
+	plt.show()
+	return [camino, self.vertices[b].costo]
 
 	def minimo(self, nv):
 		if len(nv) > 0:
