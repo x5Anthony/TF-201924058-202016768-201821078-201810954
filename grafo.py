@@ -1,7 +1,7 @@
 import networkx as nx
 import matplotlib.pyplot as plt
 class nodo:
-    def __init__(self,item):
+    def __init__(self,i):
         self.item=i#item, en este caso será la clase calle
 	self.id = i.id#id de la calle
 	self.vecinos = []
