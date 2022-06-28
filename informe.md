@@ -91,6 +91,8 @@ Ejemplo de una ruta:
 
 * Interfaz grafica
 
+[![ultimo.png](https://i.postimg.cc/Y0TVdGc7/ultimo.png)](https://postimg.cc/gLqNJ0kt)
+
 
 *Enlaces: a repositorios de GitHub / a video de presentacion
 
@@ -99,5 +101,8 @@ Ejemplo de una ruta:
 
 
 ## **7. Conclusiones**
-En conclusión, gracias a este trabajo final logramos implementar un algoritmo que nos brinde la ruta optima considerando factores de hora y tráfico. También obtuvimos conocimientos en el trabajo colaborativo usando GitHub.
+* En conclusión, gracias a este trabajo final logramos implementar un algoritmo que nos brinde la ruta optima considerando factores de hora y tráfico. También obtuvimos conocimientos en el trabajo colaborativo usando GitHub.
+* En conclusión, gracias a los algoritmos aprendidos y aplicados existen muchas herramientas que son esenciales en el correcto funcionamiento de la sociedad.
+* La teoría de grafos y sus algoritmos de cálculo son aplicables para resolver problemas en la vida cotidiana, como lo es el cálculo de la ruta más optima de un punto “A” a un punto “B”. Este y otros más casos de uso son particularmente útiles en nuestra realidad nacional.
+
 
